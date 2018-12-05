@@ -47,6 +47,11 @@ public class LoginDisplayActivity extends MainActivity{
         map.put("Img",String.valueOf(R.drawable.sumsung));
         LI.add(map);
 
+      map=new HashMap<>();
+        map.put("Titre","huawei");
+        map.put("Img",String.valueOf(R.drawable.huawei));
+        LI.add(map);
+
         map=new HashMap<>();
         map.put("Titre","Sony");
         map.put("Des","Animation");
@@ -62,39 +67,22 @@ public class LoginDisplayActivity extends MainActivity{
             @Override
             @SuppressWarnings("unchecked")
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-              /*  HashMap<String, String> map = (HashMap<String, String>) l.getItemAtPosition(position);
-
-
-                if (map.get("Title")=="Iphone"){
-                    MainActivity M = new MainActivity();
-                }
-
-                Intent intent = new Intent(LoginDisplayActivity.this, M.getClass());
-                startActivity(intent);
-                Toast.makeText(LoginDisplayActivity.this, map.get("Titre"), Toast.LENGTH_LONG).show();
-
-
                 switch( position )
                 {
                     case 0:  Intent newActivity = new Intent( LoginDisplayActivity.this , Iphone.class);
                         startActivity(newActivity);
                         break;
-                    case 1:  Intent newActivity2 = new Intent(LoginDisplayActivity.this, Sumsung.class);
+                    case 1:  Intent newActivity2 = new Intent(LoginDisplayActivity.this, Samsung.class);
                         startActivity(newActivity2);
                         break;
-                    case 2:  Intent newActivity3 = new Intent(LoginDisplayActivity.this, Sony.class);
+                    case 2:  Intent newActivity3 = new Intent(LoginDisplayActivity.this, Huawei.class);
                         startActivity(newActivity3);
                         break;
-                    case 3:  Intent newActivity4 = new Intent(LoginDisplayActivity.this, Nokia.class);
+                    case 3:  Intent newActivity4 = new Intent(LoginDisplayActivity.this, Sony.class);
                         startActivity(newActivity4);
                         break;
-                    case 4:  Intent newActivity5 = new Intent(LoginDisplayActivity.this, reservetickets.class);
-                        startActivity(newActivity5);
-                        break;
-                }
 
-   */
+                }
 
 
             }

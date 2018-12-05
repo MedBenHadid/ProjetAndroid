@@ -17,7 +17,19 @@
         <activity
             android:name=".LoginDisplayActivity"
             android:label="@string/title_activity_login_display" />
+        <activity
+            android:name=".Iphone"
+            android:label="Iphone" />
+        <activity
+            android:name=".Huawei"
+            android:label="Huawei" />
+        <activity
+            android:name=".Sony"
+            android:label="Sony" />
 
+        <activity
+            android:name=".Samsung"
+            android:label="Samsung" />
     </application>
 
 </manifest>
