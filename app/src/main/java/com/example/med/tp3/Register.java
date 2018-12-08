@@ -91,7 +91,6 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
             }
         });
     }
-//Email verification code using FirebaseUser object and using isSucccessful()function.
     private void sendEmailVerification() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user!=null){
