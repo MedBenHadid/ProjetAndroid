@@ -2,6 +2,7 @@ package com.example.med.tp3;
 
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -18,14 +19,20 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Huawei extends AppCompatActivity  {
-    private  Button btn;
+    private  Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         final ListView maListViewPerso;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listeview_phone);
-
+        button= (Button)findViewById(R.id.acheter);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity();
+            }
+        });
 
         // Récupération de la "ListView" créée dans le fichier activity_ListeView_phoneeView_phone.xml
         maListViewPerso = findViewById(R.id.listviewperso);
@@ -110,7 +117,10 @@ public class Huawei extends AppCompatActivity  {
         });
     }
 
-
+public void openActivity(){
+    Intent intent=new Intent(this,AchatActivity.class);
+    startActivity(intent);
+}
 
 
 

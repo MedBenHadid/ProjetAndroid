@@ -109,6 +109,12 @@
     <string name="enter_email">Enter Email</string>
     <string name="acheter">acheter</string>
     <string name="carecteristique">carecteristique</string>
+    <string name="votre_nom">Votre_Nom</string>
+    <string name="votre_prenom">votre_Prenom</string>
+    <string name="votre_e_mail">votre_E-mail</string>
+    <string name="votre_numero_telephone">votre_Numero_telephone</string>
+    <string name="votre_adresse">votre_Adresse</string>
+    <string name="commander">Commander</string>
 
 </resources>
 
