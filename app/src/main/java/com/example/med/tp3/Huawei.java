@@ -1,11 +1,15 @@
 package com.example.med.tp3;
 
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -13,13 +17,16 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Huawei extends AppCompatActivity {
+public class Huawei extends AppCompatActivity  {
+    private  Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         final ListView maListViewPerso;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listeview_phone);
+
+
         // Récupération de la "ListView" créée dans le fichier activity_ListeView_phoneeView_phone.xml
         maListViewPerso = findViewById(R.id.listviewperso);
 
@@ -36,9 +43,14 @@ public class Huawei extends AppCompatActivity {
         // On insère un élément "prix" que l'on récupérera dans le "TextView titre" créé dans le fichier affichage_item.xml
         map.put("prix", "190 €");
         // On insère la "référence" à l'image (convertit en String car normalement c'est un int) que l'on récupérera dans le "ImageView" créé dans le fichier affichage_item.xml
-        map.put("img", String.valueOf(R.drawable.huaweip9lite ));
+        map.put("img", String.valueOf(R.drawable.huaweip9lite));
         // Enfin on ajoute cette "HashMap" dans la "ArrayList"
         listItem.add(map);
+
+
+
+
+
 
         // On refait la manip plusieurs fois avec des données différentes pour former les items de notre "ListView"
 
@@ -55,13 +67,12 @@ public class Huawei extends AppCompatActivity {
         listItem.add(map);
 
 
-
         // Création d'un SimpleAdapter qui se chargera de mettre les items présents dans notre liste (listItem) dans la vue affichage_item
-        SimpleAdapter adapter = new SimpleAdapter (this.getBaseContext(),
+        SimpleAdapter adapter = new SimpleAdapter(this.getBaseContext(),
                 listItem,
                 R.layout.activity_item_phone,
-                new String[] { "img","name", "prix"},
-                new int[] { R.id.img,R.id.name, R.id.prix});
+                new String[]{"img", "name", "prix"},
+                new int[]{R.id.img, R.id.name, R.id.prix});
 
         // On attribue à notre "ListView" l'adapter que l'on vient de créer
         maListViewPerso.setAdapter(adapter);
@@ -98,4 +109,11 @@ public class Huawei extends AppCompatActivity {
             }
         });
     }
+
+
+
+
+
 }
+
+
