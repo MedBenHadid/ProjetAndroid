@@ -34,13 +34,11 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
                 android:gravity="center"
-                android:text="User Login "
+                android:text="@string/user_login"
                 android:textColor="#000"
-                android:textSize="20dp"
-                android:hint="df"/>
+                android:textSize="20sp"
+                android:hint="@string/df"/>
 
             <EditText
                 android:layout_width="fill_parent"
@@ -49,22 +47,18 @@
 
                 android:textColor="#000"
                 android:ems="10"
-                android:layout_below="@+id/textView"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:id="@+id/editEmail"
-                android:hint="Enter Email"
+                android:hint="@string/enter_email"
                 android:gravity="center"/>
 
             <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:hint="Enter Password"
+                android:hint="@string/enter_password"
                 android:textColor="#000"
                 android:ems="10"
-                android:layout_below="@+id/editEmail"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:id="@+id/editPassword"
                 android:gravity="center"/>
@@ -73,17 +67,15 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/buttonLogin"
-                android:layout_below="@+id/editPassword"
                 android:layout_marginTop="20dp"
-                android:text="Log IN "/>
+                android:text="@string/log_in"/>
 
             <Button
                 android:id="@+id/buttonRegister"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/buttonLogin"
                 android:layout_marginTop="20dp"
-                android:text="NOT A USER? | SIGN UP" />
+                android:text="@string/not_a_user_sign_up" />
 
 
             <com.google.android.gms.common.SignInButton

@@ -40,13 +40,13 @@
             android:id="@+id/carecteristique"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="carecteristique" />
+            android:text="@string/carecteristique" />
 
         <Button
             android:id="@+id/acheter"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="acheter" />
+            android:text="@string/acheter" />
 
     </LinearLayout>
 

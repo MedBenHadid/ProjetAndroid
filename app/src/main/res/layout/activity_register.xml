@@ -17,15 +17,15 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:gravity="center"
-        android:text="User Sign Up"
+        android:text="@string/user_sign_up"
         android:textColor="#000"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
-        android:hint="Enter Name"
+        android:hint="@string/enter_name"
         android:textColor="#000"
         android:ems="10"
         android:layout_below="@+id/textView"
@@ -38,7 +38,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
-        android:hint="Enter Email"
+        android:hint="@string/enter_email"
         android:textColor="#000"
         android:ems="10"
         android:layout_below="@+id/editName"
@@ -51,7 +51,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:hint="Enter Password"
+        android:hint="@string/enter_password"
         android:textColor="#000"
         android:ems="10"
         android:layout_below="@+id/editEmail"
@@ -66,13 +66,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/editPassword"
         android:layout_marginTop="20dp"
-        android:text="SIGN UP" />
+        android:text="@string/sign_up" />
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/buttonRegister"
         android:layout_marginTop="20dp"
-        android:text="LOGIN" />
+        android:text="@string/login" />
 
 </RelativeLayout>
