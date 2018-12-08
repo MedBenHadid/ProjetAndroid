@@ -31,6 +31,11 @@
         <activity
             android:name=".Samsung"
             android:label="Samsung" />
+        <activity
+            android:name=".AchatActivity"
+            android:label="Achat" />
     </application>
+
+
 
 </manifest>

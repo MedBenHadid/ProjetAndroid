@@ -1,12 +1,12 @@
 package com.example.med.tp3;
 
 
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -17,8 +17,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Huawei extends AppCompatActivity  {
-    private  Button btn;
+public class Huawei extends AppCompatActivity {
+    private Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,10 +48,6 @@ public class Huawei extends AppCompatActivity  {
         listItem.add(map);
 
 
-
-
-
-
         // On refait la manip plusieurs fois avec des données différentes pour former les items de notre "ListView"
 
         map = new HashMap<>();
@@ -76,7 +72,7 @@ public class Huawei extends AppCompatActivity  {
 
         // On attribue à notre "ListView" l'adapter que l'on vient de créer
         maListViewPerso.setAdapter(adapter);
-
+/*
         maListViewPerso.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             @SuppressWarnings("unchecked")
@@ -96,7 +92,8 @@ public class Huawei extends AppCompatActivity  {
                 adb.show();
                 return true;
             }
-        });
+        });*/
+
 
         maListViewPerso.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -108,12 +105,90 @@ public class Huawei extends AppCompatActivity  {
                 Toast.makeText(Huawei.this, map.get("name"), Toast.LENGTH_LONG).show();
             }
         });
+        final Context context = Huawei.this;
+        /*maListViewPerso.button1 = (Button) maListViewPerso.findViewById(R.id.carecteristique);
+
+        maListViewPerso.button1.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View arg0) {
+
+                // custom dialog
+                final Dialog dialog = new Dialog(context);
+                dialog.setContentView(R.layout.custom);
+                dialog.setTitle("Title...");
+
+                // set the custom dialog components - text, image and button
+                TextView text = (TextView) dialog.findViewById(R.id.text);
+                text.setText("Android custom dialog example!");
+                ImageView image = (ImageView) dialog.findViewById(R.id.image);
+
+                Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
+                // if button is clicked, close the custom dialog
+                dialogButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.show();
+            }
+        });
+
+       Button more = (Button) findViewById(R.id.carecteristique);
+
+        more.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                //Intent myIntent = new Intent(view.getContext(), agones.class);
+                //startActivityForResult(myIntent, 0);
+
+                final AlertDialog alertDialog = new AlertDialog.Builder(context).create();
+                alertDialog.setTitle("hi");
+                alertDialog.setMessage("this is my app");
+/*
+                alertDialog.setButton("Continue..", new DialogInterface.OnClickListener() {
+
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                })
+            }
+        });*/
+
+
+
+        maListViewPerso.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            @SuppressWarnings("unchecked")
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // On récupère la "HashMap" contenant les infos de notre item (titre, description, img)
+                HashMap<String, String> map = (HashMap<String, String>) maListViewPerso.getItemAtPosition(position);
+
+                // On crée une boite de dialogue
+                AlertDialog.Builder adb;
+                adb = new AlertDialog.Builder(context);
+                adb.setTitle(map.get("name"));
+                adb.setMessage("caracteristique: " );
+
+                adb.setPositiveButton("Acheter", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        Intent intent = new Intent(context, AchatActivity.class);
+
+                        startActivity(intent);
+                    }
+                });
+                // On affiche la boite de dialogue
+                adb.show();
+            }
+        });
     }
-
-
-
-
-
 }
+
+
+
 
 
