@@ -14,7 +14,7 @@ import java.util.HashMap;
 
 import static android.os.Build.VERSION_CODES.M;
 
-public class LoginDisplayActivity extends MainActivity{
+public class LoginDisplayActivity extends login{
     final String EXTRA_LOGIN = "user_login";
     final String EXTRA_PASSWORD = "user_password";
     protected ListView l;
