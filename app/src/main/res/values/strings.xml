@@ -96,6 +96,25 @@
 
         <string name="id_fmt">User ID: %s</string>
         <string name="email_fmt">Email: %s</string>
+    <string name="user_login">User Login</string>
+
+    <string name="not_a_user_sign_up">NOT A USER? | SIGN UP</string>
+    <string name="log_in">Log IN</string>
+    <string name="df">df</string>
+    <string name="user_sign_up">User Sign Up</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="login">LOGIN</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="acheter">acheter</string>
+    <string name="carecteristique">carecteristique</string>
+    <string name="votre_nom">Votre_Nom</string>
+    <string name="votre_prenom">votre_Prenom</string>
+    <string name="votre_e_mail">votre_E-mail</string>
+    <string name="votre_numero_telephone">votre_Numero_telephone</string>
+    <string name="votre_adresse">votre_Adresse</string>
+    <string name="commander">Commander</string>
 
 </resources>
 

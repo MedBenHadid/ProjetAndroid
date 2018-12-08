@@ -54,7 +54,6 @@ public class LoginDisplayActivity extends login{
 
         map=new HashMap<>();
         map.put("Titre","Sony");
-        map.put("Des","Animation");
         map.put("Img",String.valueOf(R.drawable.sony));
         LI.add(map);
 
